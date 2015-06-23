@@ -9,9 +9,7 @@ public class HelloRedis
 		while (true) {	
 			try {
 				Thread.sleep(5000);
-      			System.out.println("Server is running: "+jedis.ping());
-				String bookCount = jedis.get("books_count");
-				System.out.println("books_count = " + bookCount);
+      			System.out.println("Linked to redis via hosts entry for redisdb: "+jedis.ping());
 			}
 			catch (Exception e) {
 				System.out.println(e.getMessage());
